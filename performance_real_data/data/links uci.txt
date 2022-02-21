@@ -1,0 +1,11 @@
+folds - https://archive.ics.uci.edu/ml/datasets/Combined+Cycle+Power+Plant
+
+qsar - https://archive.ics.uci.edu/ml/datasets/QSAR+aquatic+toxicity
+
+real valuation - https://archive.ics.uci.edu/ml/datasets/Real+estate+valuation+data+set
+
+airflow - https://archive.ics.uci.edu/ml/datasets/Airfoil+Self-Noise
+
+auto mpg - https://archive.ics.uci.edu/ml/datasets/auto+mpg
+
+concrete - https://archive.ics.uci.edu/ml/datasets/concrete+compressive+strength

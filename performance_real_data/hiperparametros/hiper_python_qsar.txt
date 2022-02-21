@@ -1,0 +1,1 @@
+[{'alpha': 7.151893663724195}, {'n_estimators': 150, 'min_samples_split': 20, 'min_samples_leaf': 5, 'max_depth': 4}, {'learning_rate': 2.3547136016201233, 'n_estimators': 100}, {'solver': 'lbfgs', 'learning_rate_init': 0.03, 'hidden_layer_sizes': (10, 10), 'activation': 'relu'}]

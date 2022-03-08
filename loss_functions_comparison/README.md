@@ -1,12 +1,115 @@
-# An optimization approach: Knots estimation in the splines regression models
-## Authors:
+# Loss functions comparasion
 
-1. Alberto Rodrigues Ferreira
-2. [Florencia Graciela Leonardi](https://www.ime.usp.br/~leonardi/)
-3. [Alex Rodrigo dos Santos Sousa](https://github.com/Alexestat) 
+### Folder corresponding to section 3.7 of the dissertation. It contains all the images, R code of the generated images and the results presented in the section.
 
-### This is my master's degree thesis in statistics at [Department of statistics](https://www.ime.usp.br/en/graduate/statistics/) in the [University of São Paulo](https://www5.usp.br/).
+1. All images are [here](https://github.com/AlbertoRodrigues/estimating_knots_regression_splines_model/tree/main/loss_functions_comparison/images)
 
+2. All the results of estimating the number of knots and predictive performance for each model studied are [here](https://github.com/AlbertoRodrigues/estimating_knots_regression_splines_model/tree/main/loss_functions_comparison/outputs).
 
+There are four lists in R that represent the results: number_knots1(first cost function), lambda_knots1(first cost function), number_knots2(second cost function) and lambda_knots2(second cost function).
 
+The results are in a specific .txt format. An example be explained below:
+
+#Proportion of the estimated number of knots for n=300
+
+[[1]]
+number_knots1
+   1    2    3    4    5 
+0.08 0.34 0.28 0.08 0.22 
+
+#Proportion of the estimated number of knots for n=900
+
+[[2]]
+number_knots1
+   2    3    4    5 
+0.30 0.28 0.17 0.25 
+
+#Proportion of the estimated number of knots for n=1500
+
+[[3]]
+number_knots1
+   2    3    4    5 
+0.57 0.21 0.09 0.13 
+
+#Proportion of the estimated number of knots for n=3000
+
+[[4]]
+number_knots1
+   2    3    4    5 
+0.66 0.15 0.08 0.11 
+
+[[1]]
+lambda_knots1
+   0 0.01 0.03  0.1  0.3 
+0.14 0.29 0.23 0.18 0.16 
+
+[[2]]
+lambda_knots1
+   0 0.01 0.03  0.1 
+0.31 0.35 0.24 0.10 
+
+[[3]]
+lambda_knots1
+   0 0.01 0.03  0.1 
+0.29 0.50 0.15 0.06 
+
+[[4]]
+lambda_knots1
+   0 0.01 0.03  0.1 
+0.25 0.53 0.21 0.01 
+
+#Proportion of the estimated number of knots for n=300
+
+[[1]]
+number_knots2
+   1    2    3    4    5 
+0.12 0.27 0.26 0.08 0.27 
+
+#Proportion of the estimated number of knots for n=900
+
+[[2]]
+number_knots2
+   1    2    3    4    5 
+0.01 0.38 0.26 0.13 0.22 
+
+#Proportion of the estimated number of knots for n=1500
+
+[[3]]
+number_knots2
+   2    3    4    5 
+0.52 0.26 0.09 0.13 
+
+#Proportion of the estimated number of knots for n=3000
+
+[[4]]
+number_knots2
+   2    3    4    5 
+0.60 0.21 0.08 0.11 
+
+[[1]]
+lambda_knots2
+   0 0.01 0.03  0.1  0.3    1 
+0.53 0.06 0.07 0.12 0.12 0.10 
+
+[[2]]
+lambda_knots2
+   0 0.01 0.03  0.1  0.3    1 
+0.52 0.07 0.11 0.22 0.06 0.02 
+
+[[3]]
+lambda_knots2
+   0 0.01 0.03  0.1  0.3    1 
+0.47 0.28 0.09 0.11 0.03 0.02 
+
+[[4]]
+lambda_knots2
+   0 0.01 0.03  0.1  0.3    1 
+0.33 0.28 0.28 0.06 0.01 0.04 
+
+[1] 4.173393 4.108796 4.032435 4.022507
+[1] 5.859874 5.801372 5.734170 5.689517
+[1] 4.185749 4.108241 4.032888 4.022667
+[1] 5.863372 5.795202 5.731216 5.691542
+[1] 3.975401 4.020725 4.000325 4.007024
+[1] 5.577649 5.690516 5.687020 5.667225
 

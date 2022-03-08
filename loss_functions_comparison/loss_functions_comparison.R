@@ -292,10 +292,6 @@ gera_res=function(knots, theta, K, quantidade_simulacoes=100, ix)
   modelo=optim(valores_iniciais ,fn=f,gr=dfparam, method="BFGS", control=list(trace=FALSE,maxit=150))
   param=modelo$par
   
-  #list_lambda=c(0.01,0.03)
-  #num_alpha_max=2
-  #n2=c(200, 350)
-  
   list_lambda=c(0,0.01,0.03,0.1,0.3,1,3,10,30)
   num_alpha_max=5
   n2=c(300, 900, 1500, 3000)
@@ -313,7 +309,6 @@ gera_res=function(knots, theta, K, quantidade_simulacoes=100, ix)
   
   erro_simulacoes_geral3=c()
   dp_simulacoes_geral3=c()
-  #v=1
   for(v in 1:length(n2))
   {
     number_knots1=c()
@@ -338,7 +333,7 @@ gera_res=function(knots, theta, K, quantidade_simulacoes=100, ix)
     
     erro_simulacoes3=c()
     dp_simulacoes3=c()
-    #b=1
+
     for(b in 1:quantidade_simulacoes)
     {
       set.seed(b)
@@ -350,9 +345,9 @@ gera_res=function(knots, theta, K, quantidade_simulacoes=100, ix)
       
       dados1=data.frame("alpha"=0,"lambda"=0,"loss"=0,"erro_cv"=0,"dp_cv"=0)
       dados2=data.frame("alpha"=0,"lambda"=0,"loss"=0,"erro_cv"=0,"dp_cv"=0)
-      #loop da CV
+
       folds=kFold(cbind.data.frame(X_treino,X_treino+1),k=5)
-      #k=1
+
       for(k in 1:length(list_lambda))
       {
         lambda=list_lambda[k]
@@ -365,7 +360,7 @@ gera_res=function(knots, theta, K, quantidade_simulacoes=100, ix)
         vetor_lambda2=c()
         list_alpha_iter2=c()
         loss2=c()
-        #m=1
+
         for(m in 0:num_alpha_max)
         {
           alpha=m
@@ -402,8 +397,7 @@ gera_res=function(knots, theta, K, quantidade_simulacoes=100, ix)
             break
           }
         }
-      
-        #m=1  
+
       for(m in 0:num_alpha_max)
         {
             alpha=m
@@ -541,8 +535,6 @@ gera_res=function(knots, theta, K, quantidade_simulacoes=100, ix)
         dados2[k,"erro_cv"]=mean(erro_val_cv2)
         dados2[k,"dp_cv"]=mean(dp_val_cv2)
       }
-      #dados1
-      #dados2
       number_knots1[b]=dados1[order(dados1$erro_cv),"alpha"][1]
       lambda_knots1[b]=dados1[order(dados1$erro_cv),"lambda"][1]
       alpha1=number_knots1[b]
@@ -652,21 +644,9 @@ gera_res=function(knots, theta, K, quantidade_simulacoes=100, ix)
   print(dp_simulacoes_geral3)
   sink(file = NULL)
 }
-message("Função 1 iniciada!")
 gera_res(c(84.4),c(0.2,1.1, 5,1,-5.5),1,100, 1)
-message("Função 1 ok!")
-message("Função 2 iniciada!")
 gera_res(c(18,76.5),c(0.2,4.1, 5,1,-1.5,2.3),1,100,2)
-message("Função 2 ok!")
-message("Função 3 iniciada!")
 gera_res(c(15,35,66.5),c(0.2,4.1, 5,1,-1.5,10.3,-7.4),1,100,3)
-message("Função 3 ok!")
-message("Função 4 iniciada!")
 gera_res(c(84.4),c(0.2,1.1, 5,1,-5.5),3,100,4)
-message("Função 4 ok!")
-message("Função 5 iniciada!")
 gera_res(c(18,76.5),c(0.2,4.1, 5,1,-1.5,2.3),3,100,5)
-message("Função 5 ok!")
-message("Função 6 iniciada!")
 gera_res(c(15,35,66.5),c(0.2,4.1, 5,1,-1.5,10.3,-7.4),3,100,6)
-message("Função 6 ok!")

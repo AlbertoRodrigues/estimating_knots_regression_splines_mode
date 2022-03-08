@@ -36,10 +36,6 @@ r12_grafico=(ggplot(r12)+aes(x=n, y=prop, group=factor(knots), color=factor(knot
 
 grid.arrange(r11_grafico, r12_grafico)
 
-#xtable(matrix(r1$prop,byrow=T,ncol=6))
-# Tabela dos erro quadratico medio e desvio padrão
-#lambda1=matrix(c(),byrow=T, ncol=9)
-
 erro1=matrix(c(4.106785, 4.066082, 4.020465, 4.015473,
                 5.729636, 5.750628, 5.717657, 5.676678,
                 4.109269, 4.064020, 4.019613, 4.016001,

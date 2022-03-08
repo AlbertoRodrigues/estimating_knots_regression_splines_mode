@@ -1,0 +1,1 @@
+## Folder corresponding to section 3.5 of the dissertation. It contains all the images, R code and the corresponding output files that generated the latex tables.

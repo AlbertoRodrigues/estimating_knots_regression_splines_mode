@@ -260,19 +260,16 @@ n=nrow(X)
 
 loss1=list()
 loss2=list()
-#k=1
 for(k in 1:length(list_lambda))
 {
   loss1[[k]]=matrix(0,quantidade_simulacoes,length(list_alpha[[1]]))
   loss2[[k]]=matrix(0,quantidade_simulacoes,length(list_alpha[[1]]))
   lambda=list_lambda[k]
-  #b=1
   for(b in 1:quantidade_simulacoes)
   {
     set.seed(b)
     ruido=rnorm(dim(X)[1],0,2)
     y=f_y(X)+ruido
-    #m=2
     for(m in 1:length(list_alpha[[1]]))
     {
       alpha=list_alpha[[1]][m]
@@ -289,7 +286,6 @@ for(k in 1:length(list_lambda))
       
       dfparam=function(theta)
       {
-        #theta=valores_iniciais
         dtheta2=c()
         for(i in 1:length(dtheta))
         {
@@ -340,7 +336,6 @@ colnames(j2)=list_alpha[[1]]
 rownames(j1)=list_lambda
 rownames(j2)=list_lambda
 
-#ix=1
 sink(file = paste("\\Users\\Alberto\\Desktop\\ime-usp\\dissertacao_ime_mestrado\\estnumberknots\\R_output_", ix, ".txt"))
 
 print(j1)
@@ -357,47 +352,3 @@ knots_analysis(c(15,35,66.5), c(0.2,4.1, 5,1,-1.5,10.3,-7.4), 1, 100, 5)
 knots_analysis(c(84.4), c(0.2,1.1, 5,1,-5.5), 3, 100, 2)
 knots_analysis(c(18,76.5), c(0.2,4.1, 5,1,-1.5,2.3), 3, 100, 4)
 knots_analysis(c(15,35,66.5), c(0.2,4.1, 5,1,-1.5,10.3,-7.4), 3, 100, 6)
-
-#require(ggplot2)
-#require(latex2exp)
-#require(gridExtra)      lambda=list_lambda[k]
-      
-
-#a=(ggplot()+
-#    geom_line(aes(list_alpha[[1]],colMeans(loss1[[1]]),col="a"),lwd=1.3)+
-#    geom_line(aes(list_alpha[[1]],colMeans(loss1[[2]]),col="b"),lwd=1.3)+
-#    geom_line(aes(list_alpha[[1]],colMeans(loss1[[3]]),col="c"),lwd=1.3)+
-#    geom_line(aes(list_alpha[[1]],colMeans(loss1[[4]]),col="d"),lwd=1.3)+
-#    geom_point(aes(list_alpha[[1]],colMeans(loss1[[1]])),lwd=1.3)+
-#    geom_point(aes(list_alpha[[1]],colMeans(loss1[[2]])),lwd=1.3)+
-#    geom_point(aes(list_alpha[[1]],colMeans(loss1[[3]])),lwd=1.3)+
-#    geom_point(aes(list_alpha[[1]],colMeans(loss1[[4]])),lwd=1.3)+
-#    scale_x_continuous( labels = factor(list_alpha[[1]]), breaks = list_alpha[[1]])+
-#    scale_colour_manual(substitute(paste(lambda," values")),values = c("#d11141","#D55E00","darkgreen","steelblue"),
-#                        labels=c(substitute(paste(lambda,"=0.1")),
-#                                 substitute(paste(lambda,"=0.3")),
-#                                 substitute(paste(lambda,"=1")),
-#                                 substitute(paste(lambda,"=3"))))+
-#    labs(x=substitute(alpha),y=unname(TeX("$J_{1}(\\theta)")))+
-#    theme_test())
-
-#b=(ggplot()+
-#    geom_line(aes(list_alpha[[1]],colMeans(loss2[[1]]),col="a"),lwd=1.3)+
-#    geom_line(aes(list_alpha[[1]],colMeans(loss2[[2]]),col="b"),lwd=1.3)+
-#    geom_line(aes(list_alpha[[1]],colMeans(loss2[[3]]),col="c"),lwd=1.3)+
-#    geom_line(aes(list_alpha[[1]],colMeans(loss2[[4]]),col="d"),lwd=1.3)+
-#    geom_point(aes(list_alpha[[1]],colMeans(loss2[[1]])),lwd=1.3)+
-#    geom_point(aes(list_alpha[[1]],colMeans(loss2[[2]])),lwd=1.3)+
-#    geom_point(aes(list_alpha[[1]],colMeans(loss2[[3]])),lwd=1.3)+
-#    geom_point(aes(list_alpha[[1]],colMeans(loss2[[4]])),lwd=1.3)+
-#    scale_x_continuous( labels = factor(list_alpha[[1]]), breaks = list_alpha[[1]])+
-#    scale_colour_manual(substitute(paste(lambda," values")),values = c("#d11141","#D55E00","darkgreen","steelblue"),
-#                        labels=c(substitute(paste(lambda,"=0.1")),
-#                                 substitute(paste(lambda,"=0.3")),
-#                                 substitute(paste(lambda,"=1")),
-#                                 substitute(paste(lambda,"=3"))))+
-#     labs(x=substitute(alpha),y=unname(TeX("$J_{2}(\\theta)")))+
-#    theme_test())
-
-
-#grid.arrange(a,b)

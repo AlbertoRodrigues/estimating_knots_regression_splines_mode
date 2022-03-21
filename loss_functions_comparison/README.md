@@ -13,98 +13,164 @@ The results are in a specific .txt format. An example be explained below:
 #Proportion of the estimated number of knots for n=300
 
 [[1]]
+
 number_knots1
+
    1    2    3    4    5 
+
 0.08 0.34 0.28 0.08 0.22 
 
 #Proportion of the estimated number of knots for n=900
 
 [[2]]
+
 number_knots1
+
    2    3    4    5 
+
 0.30 0.28 0.17 0.25 
 
 #Proportion of the estimated number of knots for n=1500
 
 [[3]]
+
 number_knots1
+
    2    3    4    5 
+
 0.57 0.21 0.09 0.13 
 
 #Proportion of the estimated number of knots for n=3000
 
 [[4]]
+
 number_knots1
+
    2    3    4    5 
+
 0.66 0.15 0.08 0.11 
 
+#Proportion of the lambda chosen for n=300
+
 [[1]]
+
 lambda_knots1
+
    0 0.01 0.03  0.1  0.3 
+
 0.14 0.29 0.23 0.18 0.16 
 
+#Proportion of the lambda chosen for n=900
+
 [[2]]
+
 lambda_knots1
+
    0 0.01 0.03  0.1 
+
 0.31 0.35 0.24 0.10 
 
+#Proportion of the lambda chosen for n=1500
+
 [[3]]
+
 lambda_knots1
+
    0 0.01 0.03  0.1 
+
 0.29 0.50 0.15 0.06 
 
+#Proportion of the lambda chosen for n=3000
+
 [[4]]
+
 lambda_knots1
+
    0 0.01 0.03  0.1 
+
 0.25 0.53 0.21 0.01 
 
 #Proportion of the estimated number of knots for n=300
 
 [[1]]
+
 number_knots2
+
    1    2    3    4    5 
+
 0.12 0.27 0.26 0.08 0.27 
 
 #Proportion of the estimated number of knots for n=900
 
 [[2]]
+
 number_knots2
+
    1    2    3    4    5 
+
 0.01 0.38 0.26 0.13 0.22 
 
 #Proportion of the estimated number of knots for n=1500
 
 [[3]]
+
 number_knots2
+
    2    3    4    5 
+
 0.52 0.26 0.09 0.13 
 
 #Proportion of the estimated number of knots for n=3000
 
 [[4]]
+
 number_knots2
+
    2    3    4    5 
+
 0.60 0.21 0.08 0.11 
 
+#Proportion of the lambda chosen for n=300
+
 [[1]]
+
 lambda_knots2
+
    0 0.01 0.03  0.1  0.3    1 
+
 0.53 0.06 0.07 0.12 0.12 0.10 
 
+#Proportion of the lambda chosen for n=900
+
 [[2]]
+
 lambda_knots2
+
    0 0.01 0.03  0.1  0.3    1 
+
 0.52 0.07 0.11 0.22 0.06 0.02 
 
+#Proportion of the lambda chosen for n=1500
+
 [[3]]
+
 lambda_knots2
+
    0 0.01 0.03  0.1  0.3    1 
+
 0.47 0.28 0.09 0.11 0.03 0.02 
 
+#Proportion of the lambda chosen for n=3000
+
 [[4]]
+
 lambda_knots2
+
    0 0.01 0.03  0.1  0.3    1 
+
 0.33 0.28 0.28 0.06 0.01 0.04 
+
+# MSE, Standart deviation of the mean squared of the two cost functions and generated model for all size samples.
 
 [1] 4.173393 4.108796 4.032435 4.022507
 [1] 5.859874 5.801372 5.734170 5.689517

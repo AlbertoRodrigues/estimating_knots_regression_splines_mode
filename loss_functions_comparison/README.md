@@ -26,9 +26,10 @@ number_knots1
 
 number_knots1
 
-   2    3    4    5 
+| Number of Knots  | 2  |  3 | 4  | 5  |  
+|---|---|---|---|---|
+| Proportion  | 0.30 | 0.28 | 0.17 | 0.25|
 
-0.30 0.28 0.17 0.25 
 
 #Proportion of the estimated number of knots for n=1500
 

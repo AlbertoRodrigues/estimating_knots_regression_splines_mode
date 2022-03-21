@@ -13,7 +13,7 @@ The results are in a specific .txt format. An example be explained below:
 #Proportion of the estimated number of knots for n=300
 
 | Number of Knots  | 1 | 2  |  3 | 4  | 5  |  
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 | Proportion  | 0.08 | 0.34 | 0.28 | 0.08 | 0.22  |
 
 
@@ -41,7 +41,7 @@ The results are in a specific .txt format. An example be explained below:
 #Proportion of the lambda chosen for n=300
 
 | Number of Knots  | 0 | 0.01 | 0.03 | 0.1 | 0.3  | 
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 | Proportion  | 0.14 | 0.29 | 0.23 | 0.18 | 0.16  | 
 
 

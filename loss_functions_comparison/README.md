@@ -71,12 +71,14 @@ lambda_knots1
 
 ### For the second cost function, the way is exactly the same.
 
-# MSE, Standart deviation of the mean squared of the two cost functions and generated model for all size samples.
+## MSE, Standart deviation of the mean squared of the two cost functions and generated model for all size samples.
 
-[1] 4.173393 4.108796 4.032435 4.022507
-[1] 5.859874 5.801372 5.734170 5.689517
-[1] 4.185749 4.108241 4.032888 4.022667
-[1] 5.863372 5.795202 5.731216 5.691542
-[1] 3.975401 4.020725 4.000325 4.007024
-[1] 5.577649 5.690516 5.687020 5.667225
+| Size sample  | 300  | 900  | 1500  | 3000  |
+|---|---|---|---|---|
+| MSE - First cost function  |  4.173393 | 4.108796 | 4.032435 | 4.022507 |  
+| SD - First cost function |  5.859874 | 5.801372 | 5.734170 | 5.689517 |  
+| MSE - Second cost function   |  4.185749 | 4.108241 | 4.032888 | 4.022667 |  
+| SD - Second cost function  |  5.863372 | 5.795202 | 5.731216 | 5.691542 |  
+| MSE - generated model  | 3.975401 | 4.020725 | 4.000325 | 4.007024  |  
+| SD - generated model |  5.577649 | 5.690516 | 5.687020 | 5.667225 | 
 
